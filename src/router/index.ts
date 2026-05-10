@@ -10,6 +10,11 @@ const router = createRouter({
       component: LoginView,
       meta: { layout: 'default' },
     },
+    {
+      path: '/application/choose-church',
+      name: 'choose-church',
+      component: () => import('../views/application/ChooseChurchView.vue'),
+    },
   ],
 })
 
