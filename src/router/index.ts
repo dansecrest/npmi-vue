@@ -8,6 +8,7 @@ const router = createRouter({
       path: '/',
       name: 'login',
       component: LoginView,
+      meta: { layout: 'default' },
     },
   ],
 })

@@ -1,19 +1,15 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import AppHeader from '@/components/AppHeader.vue'
-import DefaultHeader from '@/components/DefaultHeader.vue'
-import AppFooter from '@/components/AppFooter.vue'
+import DefaultLayout from '@/layouts/DefaultLayout.vue'
+import AppLayout from '@/layouts/AppLayout.vue'
 
 const route = useRoute()
-const isAuthenticated = computed(() => route.meta.layout === 'app')
+const layout = computed(() => route.meta.layout === 'default' ? DefaultLayout : AppLayout)
 </script>
 
 <template>
-  <AppHeader v-if="isAuthenticated" userName="Marge" :church="{ name: 'North Point Ministries', fileName: 'npm' }" />
-  <DefaultHeader v-else />
-  <main :class="isAuthenticated ? '' : 'login'">
+  <component :is="layout">
     <RouterView />
-  </main>
-  <AppFooter />
+  </component>
 </template>
