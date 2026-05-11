@@ -29,7 +29,7 @@ watch(
     :church="{ name: churchStore.name, fileName: churchStore.fileName }"
     :label="headerLabel"
   />
-  <main>
+  <main :class="route.meta.mainClass">
     <slot />
   </main>
   <AppFooter />
