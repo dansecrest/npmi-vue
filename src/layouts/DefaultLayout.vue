@@ -5,7 +5,7 @@ import AppFooter from '@/components/AppFooter.vue'
 
 <template>
   <DefaultHeader />
-  <main>
+  <main class="login">
     <slot />
   </main>
   <AppFooter />
