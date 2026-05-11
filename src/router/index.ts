@@ -10,6 +10,12 @@ const router = createRouter({
       meta: { layout: 'default', mainClass: 'login-view' },
     },
     {
+      path: '/profile',
+      name: 'profile',
+      component: () => import('../views/ProfileView.vue'),
+      meta: { mainClass: 'profile-view' },
+    },
+    {
       path: '/applications/choose-church',
       name: 'choose-church',
       component: () => import('../views/applications/ChooseChurchView.vue'),

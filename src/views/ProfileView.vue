@@ -1,0 +1,224 @@
+<template>
+  <div class="profile-container">
+    <section class="profile-main">
+      <div class="profile-info">
+        <div class="profile-avatar">
+          <div class="circle">
+            <!-- <img src="images/profile/marge.png"> -->
+            <i class="placeholder fa fa-user"></i>
+          </div>
+          <a href="profile-edit.html" class="button">Edit Info</a>
+        </div>
+
+        <div class="profile-content">
+          <h2>Marge Simpson</h2>
+          <div>
+            <ul>
+              <li>Female (1/1/1960)</li>
+              <li>Married (4/1/1980)</li>
+              <li>555-123-9876</li>
+              <li>marge.simpson@gmail.com</li>
+            </ul>
+            <address>
+              <h3>Address</h3>
+              <ul>
+                <li>742 Evergreen Terrace</li>
+                <li>Springfield, IL 55555</li>
+              </ul>
+            </address>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="profile-sections">
+      <div class="section-heading open">
+        <i class="icon fa fa-home"></i>
+        <span>Family</span>
+        <i class="arrow fa fa-angle-down"></i>
+      </div>
+
+      <section class="family-info">
+        <div class="family-content">
+          <a href="#" class="family-member">
+            <div class="circle">
+              <!-- <img src="images/profile/homer.png" /> -->
+              <i class="placeholder fa fa-user"></i>
+            </div>
+            <ul>
+              <li>Homer</li>
+              <li>40</li>
+            </ul>
+          </a>
+
+          <a href="#" class="family-member">
+            <div class="circle">
+              <!-- <img src="images/profile/bart.png" /> -->
+              <i class="placeholder fa fa-user"></i>
+            </div>
+            <ul>
+              <li>Bart</li>
+              <li>10</li>
+            </ul>
+          </a>
+
+          <a href="#" class="family-member">
+            <div class="circle">
+              <!-- <img src="images/profile/lisa.png" /> -->
+              <i class="placeholder fa fa-user"></i>
+            </div>
+            <ul>
+              <li>Lisa</li>
+              <li>8</li>
+            </ul>
+          </a>
+
+          <a href="#" class="family-member">
+            <div class="circle">
+              <!-- <img src="images/profile/maggie.png" /> -->
+              <i class="placeholder fa fa-user"></i>
+            </div>
+            <ul>
+              <li>Maggie</li>
+              <li>1</li>
+            </ul>
+          </a>
+        </div>
+      </section>
+
+      <div class="section-heading open">
+        <i class="icon fa fa-hand-holding-dollar"></i>
+        <span>Giving</span>
+        <i class="arrow fa fa-angle-down"></i>
+      </div>
+
+      <section class="giving-info">
+        <div class="giving-content">
+          <div class="giving-year">
+            <h3>2023</h3>
+            <ul>
+              <li>General- North Point <span>$4,000.00</span></li>
+              <li>Intersect Initiative - NP <span>$200.00</span></li>
+              <li>Total <span>$4,200.00</span></li>
+            </ul>
+          </div>
+
+          <div class="giving-year">
+            <h3>2022</h3>
+            <ul>
+              <li>Be Rich Initiative - NPCC <span>$1,000.00</span></li>
+              <li>General- North Point <span>$6,000.00</span></li>
+              <li>Intersect Initiative - NP <span>$100.00</span></li>
+              <li>Total <span>$7,100.00</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="giving-statements">
+          <h3>Statements</h3>
+          <div>
+            <a href="#">2023 YTD</a>
+            <span>|</span>
+            <a href="#">2022</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-heading open">
+        <i class="icon fa fa-heart"></i>
+        <span>Serving</span>
+        <i class="arrow fa fa-angle-down"></i>
+      </div>
+
+      <section class="serving-info">
+        <div class="serving-content">
+          <div class="group">
+            <h3>InsideOut</h3>
+            <ul>
+              <li>Adult Leader</li>
+              <li>Active</li>
+            </ul>
+          </div>
+
+          <div class="group">
+            <h3>Guest Services</h3>
+            <ul>
+              <li>Adult Volunteer</li>
+              <li>Active</li>
+            </ul>
+          </div>
+
+          <div class="group inactive">
+            <h3>Transit</h3>
+            <ul>
+              <li>Adult Leader</li>
+              <li>Inactive</li>
+            </ul>
+          </div>
+
+          <div class="group inactive">
+            <h3>UpStreet</h3>
+            <ul>
+              <li>Adult Leader</li>
+              <li>Inactive</li>
+            </ul>
+          </div>
+        </div>
+
+        <!--
+        <div class="serving-content">
+          <p>You do not have any active serving roles.</p>
+        </div>
+        -->
+      </section>
+
+      <div class="section-heading open">
+        <i class="icon fa fa-users"></i>
+        <span>Groups</span>
+        <i class="arrow fa fa-angle-down"></i>
+      </div>
+
+      <section class="groups-info">
+        <div class="groups-content">
+          <div class="group">
+            <h3>Women's Group</h3>
+            <ul>
+              <li>Member / 12 Members</li>
+              <li>Started 8/20/2022</li>
+            </ul>
+          </div>
+
+          <div class="group">
+            <h3>Thrive</h3>
+            <ul>
+              <li>Member / 8 Members</li>
+              <li>Started 7/31/2022</li>
+            </ul>
+          </div>
+
+          <div class="group inactive">
+            <h3>Women's Group</h3>
+            <ul>
+              <li>Member / 10 Members</li>
+              <li>Ended 5/19/2022</li>
+            </ul>
+          </div>
+
+          <div class="group inactive">
+            <h3>Starting Point</h3>
+            <ul>
+              <li>Member / 12 Members</li>
+              <li>Ended 12/5/2014</li>
+            </ul>
+          </div>
+        </div>
+
+        <!--
+        <div class="groups-content">
+          <p>You are not active in any groups.</p>
+        </div>
+        -->
+      </section>
+    </div>
+  </div>
+</template>
