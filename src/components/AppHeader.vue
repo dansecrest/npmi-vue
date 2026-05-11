@@ -1,10 +1,11 @@
 <script setup lang="ts">
-defineProps<{
+const props = defineProps<{
   userName: string
   church: {
     name: string
     fileName: string
   }
+  label?: string
 }>()
 </script>
 
@@ -12,12 +13,23 @@ defineProps<{
   <header class="header">
     <div class="site-header">
       <RouterLink to="/" class="logo">
-        <img :src="`/images/church-icons/${church.fileName}.svg`" :alt="`${church.name}`" class="church-icon">
-        <img :src="`/images/church-logos/${church.fileName}.svg`" :alt="`${church.name}`" class="church-logo">
+        <img
+          :src="`/images/church-icons/${props.church.fileName}.svg`"
+          :alt="`${church.name}`"
+          class="church-icon"
+        />
+        <img
+          :src="`/images/church-logos/${props.church.fileName}.svg`"
+          :alt="`${church.name}`"
+          class="church-logo"
+        />
+        <span v-if="label">{{ label }}</span>
       </RouterLink>
 
       <div class="greeting">
-        <p>Welcome, <strong>{{ userName }}</strong></p>
+        <p>
+          Welcome, <strong>{{ userName }}</strong>
+        </p>
         <i class="fa fa-caret-down"></i>
         <div class="menu">
           <RouterLink to="/my-applications">My Applications</RouterLink>

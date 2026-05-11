@@ -1,10 +1,18 @@
 <script setup lang="ts">
-import { watch } from 'vue'
+import { computed, watch } from 'vue'
+import { useRoute } from 'vue-router'
 import AppHeader from '@/components/AppHeader.vue'
 import AppFooter from '@/components/AppFooter.vue'
 import { useChurchStore } from '@/stores/church'
 
 const churchStore = useChurchStore()
+const route = useRoute()
+
+const headerLabel = computed(() => {
+  if (route.path.startsWith('/application')) return 'Applications'
+  if (route.path.startsWith('/profile')) return 'Profile'
+  return ''
+})
 
 watch(
   () => churchStore.color,
@@ -19,6 +27,7 @@ watch(
   <AppHeader
     userName="Marge"
     :church="{ name: churchStore.name, fileName: churchStore.fileName }"
+    :label="headerLabel"
   />
   <main>
     <slot />
