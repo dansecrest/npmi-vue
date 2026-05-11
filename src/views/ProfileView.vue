@@ -1,3 +1,18 @@
+<script setup lang="ts">
+import { reactive } from 'vue'
+
+const openSections = reactive({
+  family: true,
+  giving: false,
+  serving: false,
+  groups: false,
+})
+
+function toggleSection(section: keyof typeof openSections) {
+  openSections[section] = !openSections[section]
+}
+</script>
+
 <template>
   <div class="profile-container">
     <section class="profile-main">
@@ -32,7 +47,11 @@
     </section>
 
     <div class="profile-sections">
-      <div class="section-heading open">
+      <div
+        class="section-heading"
+        :class="{ open: openSections.family }"
+        @click="toggleSection('family')"
+      >
         <i class="icon fa fa-home"></i>
         <span>Family</span>
         <i class="arrow fa fa-angle-down"></i>
@@ -86,7 +105,11 @@
         </div>
       </section>
 
-      <div class="section-heading open">
+      <div
+        class="section-heading"
+        :class="{ open: openSections.giving }"
+        @click="toggleSection('giving')"
+      >
         <i class="icon fa fa-hand-holding-dollar"></i>
         <span>Giving</span>
         <i class="arrow fa fa-angle-down"></i>
@@ -124,7 +147,11 @@
         </div>
       </section>
 
-      <div class="section-heading open">
+      <div
+        class="section-heading"
+        :class="{ open: openSections.serving }"
+        @click="toggleSection('serving')"
+      >
         <i class="icon fa fa-heart"></i>
         <span>Serving</span>
         <i class="arrow fa fa-angle-down"></i>
@@ -172,7 +199,11 @@
         -->
       </section>
 
-      <div class="section-heading open">
+      <div
+        class="section-heading"
+        :class="{ open: openSections.groups }"
+        @click="toggleSection('groups')"
+      >
         <i class="icon fa fa-users"></i>
         <span>Groups</span>
         <i class="arrow fa fa-angle-down"></i>
