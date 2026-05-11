@@ -11,9 +11,9 @@ const router = createRouter({
       meta: { layout: 'default' },
     },
     {
-      path: '/application/choose-church',
+      path: '/applications/choose-church',
       name: 'choose-church',
-      component: () => import('../views/application/ChooseChurchView.vue'),
+      component: () => import('../views/applications/ChooseChurchView.vue'),
     },
   ],
 })
